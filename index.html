@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Contact Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #eef2f3, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    /* Form Container */
+    .contact-form {
+      background-color: #fff;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+      transition: transform 0.3s;
+    }
+
+    .contact-form:hover {
+      transform: translateY(-5px);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+      font-weight: 600;
+      font-size: 28px;
+    }
+
+    /* Form Groups */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+      color: #555;
+      font-size: 14px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0,123,255,0.3);
+      outline: none;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* Submit Button */
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #007BFF;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .contact-form {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <form class="contact-form" action="#" method="post">
+    <h2>Contact Us</h2>
+
+    <!-- Name -->
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" required minlength="3" maxlength="50" placeholder="Your full name">
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" required placeholder="example@domain.com">
+    </div>
+
+    <!-- Phone -->
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="1234567890">
+    </div>
+
+    <!-- Subject -->
+    <div class="form-group">
+      <label for="subject">Subject *</label>
+      <input type="text" id="subject" name="subject" required maxlength="100" placeholder="Subject of your message">
+    </div>
+
+    <!-- Message -->
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" required minlength="10" maxlength="500" placeholder="Write your message here"></textarea>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit">Send Message</button>
+  </form>
+
+</body>
+</html>
+
+
